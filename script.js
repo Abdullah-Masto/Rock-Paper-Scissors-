@@ -19,16 +19,25 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection == "Scissors" && computerSelection == "Paper") ||
     (playerSelection == "Paper" && computerSelection == "Rock")
   ) {
-    return `you won! ${playerSelection} beats ${computerSelection}`;
+    return `you Won! ${playerSelection} beats ${computerSelection}`;
   } else if (
     (computerSelection == "Rock" && playerSelection == "Scissors") ||
     (computerSelection == "Scissors" && playerSelection == "Paper") ||
     (computerSelection == "Paper" && playerSelection == "Rock")
   ) {
-    return `you won! ${computerSelection} beats ${playerSelection}`;
+    return `you Lose! ${computerSelection} beats ${playerSelection}`;
   }
 }
 
-for (let index = 0; index < 30; index++) {
-  console.log(getComputerChoice());
+function game() {
+  for (let i = 0; i < 5; i++) {
+    let playerSelection = prompt("enter your choice:").toLowerCase();
+    playerSelection = playerSelection
+      .substring(0, 1)
+      .toUpperCase()
+      .concat(playerSelection.substring(1));
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+  }
 }
+game();

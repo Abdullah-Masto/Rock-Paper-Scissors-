@@ -4,7 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <h1>Choose A Tool</h1>
+    <div class="tools">
+      <button id="Rock">
+        <img src="images/noun-rock-5846.svg" alt="Rock" />
+      </button>
+      <button id="Paper">
+        <img src="images/noun-paper-1154236.svg" alt="Paper" />
+      </button>
+      <button id="Scissors">
+        <img src="images/noun-scissors-1153093.svg" alt="Scissors" />
+      </button>
+    </div>
+    <div class="results">
+      <div class="players">
+        <div class="you">You</div>
+        <div class="computer">Computer</div>
+      </div>
+      <div class="points">
+        <div class="you points">0</div>
+        <div class="computer points">0</div>
+      </div>
+    </div>
+    <div class="state"></div>
+  </body>
 </html>
